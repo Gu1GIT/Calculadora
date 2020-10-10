@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-//9
+
     public void onclickmultiplicacao(View v) {
         if (!primeironumero.isEmpty()) {
             operacao = "*";
