@@ -74,43 +74,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onclickadicao(View v) {
-        if (!primeironumero.isEmpty()) {
-            operacao = "+";
-            atualizarDisplay("+");
-        } else {
-            erroMensagem();
-        }
-
+        operador("+");
     }
 
     public void onclicksubtracao(View v) {
-        if (!primeironumero.isEmpty()) {
-            operacao = "-";
-            atualizarDisplay("-");
-        } else {
-            erroMensagem();
-        }
-
+        operador("-");
     }
 
     public void onclickmultiplicacao(View v) {
-        if (!primeironumero.isEmpty()) {
-            operacao = "*";
-            atualizarDisplay("x");
-        } else {
-            erroMensagem();
-        }
-
+        operador("*");
     }
 
     public void onclickdivisao(View v) {
-        if (!primeironumero.isEmpty()) {
-            operacao = "/";
-            atualizarDisplay("/");
+        operador("/");
+    }
+
+    private void operador(String operador) {
+        if (!primeironumero.isEmpty() && operacao.isEmpty()) {
+            operacao = operador;
+            atualizarDisplay(operador);
         } else {
             erroMensagem();
         }
-
     }
 
     private void erroMensagem() {
